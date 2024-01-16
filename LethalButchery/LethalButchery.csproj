@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <AssemblyName>LethalCompanyTemplate</AssemblyName>
-        <Description>A template for Lethal Company</Description>
-        <Version>1.0.0</Version>
+        <AssemblyName>LethalButchery</AssemblyName>
+        <Product>Lethal Butchery</Product>
+        <Description>A Lethal Company Mod that lets you sell monster corpses for meat</Description>
+        <Version>0.0.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
