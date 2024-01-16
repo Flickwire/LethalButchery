@@ -24,10 +24,13 @@
 
     <ItemGroup>
       <Reference Include="Assembly-CSharp" Publicize="true">
-        <HintPath>..\Assembly-CSharp.dll</HintPath>
+        <HintPath>..\lib\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>..\UnityEngine.dll</HintPath>
+        <HintPath>..\lib\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Netcode.Runtime">
+        <HintPath>..\lib\Unity.Netcode.Runtime.dll</HintPath>
       </Reference>
     </ItemGroup>
 </Project>
