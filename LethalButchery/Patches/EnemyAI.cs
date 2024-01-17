@@ -1,29 +1,18 @@
 
-using BepInEx.Logging;
 using HarmonyLib;
+using System;
+using System.Runtime.CompilerServices;
 
 namespace LethalButchery.Patches;
 
-[HarmonyPatch(typeof(EnemyAI), nameof(EnemyAI.KillEnemy))]
-internal static class KillEnemy_Patch
+[HarmonyPatch]
+internal class EnemyAI_Patch
 {
-    [HarmonyPostfix]
-    private static void Postfix(EnemyAI __instance, bool __0)
+    [HarmonyReversePatch]
+    [HarmonyPatch(typeof(EnemyAI), nameof(EnemyAI.KillEnemy))]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal static void KillEnemy(object instance, bool destroy = false)
     {
-        ManualLogSource log = Logger.CreateLogSource(nameof(KillEnemy_Patch));
-        log.LogInfo($"Custom kill enemy called on {__instance.enemyType}; destroy: {__0}");
-        return;
-    }
-}
-
-[HarmonyPatch(typeof(EnemyAI), nameof(EnemyAI.Start))]
-internal static class Start_Patch
-{
-    [HarmonyPostfix]
-    private static void Postfix(EnemyAI __instance)
-    {
-        ManualLogSource log = Logger.CreateLogSource(nameof(Start_Patch));
-        log.LogInfo($"Custom start called on {__instance.enemyType};");
-        return;
+        throw new NotImplementedException("Stub");
     }
 }
